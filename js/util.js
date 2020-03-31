@@ -131,7 +131,7 @@ function createParticles() {
                 "events": {
                     "onhover": {
                         "enable": true,
-                        "mode": "grab"
+                        "mode": "repulse"
                     },
                     "onclick": {
                         "enable": true,
