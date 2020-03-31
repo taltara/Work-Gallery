@@ -18,7 +18,8 @@ function initPageTilt() {
 
     var elPorttfolios = document.querySelectorAll('.portfolio-item');
     var elIdCard = document.querySelector('.rounded-circle');
-    tiltItems = [...elPorttfolios, elIdCard];
+    var elResponsiveDesign = document.querySelector('.responsive-tilt');
+    tiltItems = [...elPorttfolios, elIdCard, elResponsiveDesign];
     console.log(tiltItems);
     
     
@@ -42,9 +43,10 @@ function initServicesSection() {
     var elServicesContent = $('.services-content');
 
     var strHtml = servicesSectionData.map((serviceItem) => {
-
+        var addRes;
+        addRes = (serviceItem.logo === 'laptop') ? 'responsive-tilt' : '';
         return `
-        <div class="col-md-4">
+        <div class="col-md-4 ${addRes}">
               <span class="fa-stack fa-4x">
                   <i class="fa fa-circle fa-stack-2x text-primary"></i>
                   <i class="fa fa-${serviceItem.logo} fa-stack-1x fa-inverse"></i>
