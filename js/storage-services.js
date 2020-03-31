@@ -23,6 +23,6 @@ const portfoliosModalData = [
     {imgUrl: 'uBooks.gif', name: 'uBooks', secondary: 'Powering Your Books', desc: 'A Google Books powered dead simple books Management system for all of your reading tracking needs!', 
     date: 'March 2020', client: '', category: 'Utilities', gitUrl: 'https://taltara.github.io/uBooks/'},
     {imgUrl: 'touch-nums.gif', name: 'Touch-Nums', secondary: 'Good Luck.', desc: `Powered by Vanillatilt and Isotope JS, Things aren'nt going to be as simple as they seem..`, 
-    date: 'March 2020', client: '', category: 'Games', gitUrl: 'https://taltara.github.io/MineSweeper-JS/'},
+    date: 'March 2020', client: '', category: 'Games', gitUrl: 'https://taltara.github.io/Touch-Nums/'},
 
 ];
