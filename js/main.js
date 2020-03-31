@@ -7,11 +7,30 @@ function onInit() {
     initPortfolioSection();
     initContactSection();
     initHeroParticles();
+    initPageTilt();
+
 }
+
+
+function initPageTilt() {
+
+    var tiltItems = [];
+
+    var elPorttfolios = document.querySelectorAll('.portfolio-item');
+    var elIdCard = document.querySelector('.rounded-circle');
+    tiltItems = [...elPorttfolios, elIdCard];
+    console.log(tiltItems);
+    
+    
+
+    handleTilts(tiltItems);
+}
+
+
 
 function initHeroParticles() {
 
-    var mastHero = $('.intro-text');
+    var mastHero = $('.particles-area');
     mastHero.attr('id', 'particles-js');
     createParticles();
 
@@ -120,7 +139,6 @@ function onContactSend() {
 
     var elOffCanvasContact = $('#contact');
 
-    
     var contactName = $('.contact-name').val();
     var contactEmail = $('#contact-email').val();
     var contactMsg = $('#contact-message').val();
@@ -129,6 +147,8 @@ function onContactSend() {
     
     elOffCanvasContact.html('<p class="reached-out-msg">Thanks For Reaching Out!</p>');
 
+    
+
     setTimeout(() => {
 
         openCanvas();
@@ -136,6 +156,7 @@ function onContactSend() {
         setTimeout(() => {
             initContactSection();
         }, 300);
+        window.open(`mailto:taltarablus@gmail.com?subject=Messaage%20From%20${contactName} (${contactEmail})&body=${contactMsg}`);
     }, 2000);
 
 

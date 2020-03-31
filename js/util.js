@@ -1,5 +1,11 @@
 'use strict';
 
+const TILTINIT = 1;
+const TILTDESTROY = 2;
+const TILTRESET = 3;
+
+
+
 function componentToHex(c) {
     var hex = c.toString(16);
     return hex.length == 1 ? "0" + hex : hex;
@@ -20,6 +26,31 @@ function getRandomColor(change = 0) {
     }
 
     return "#" + componentToHex(randomColor[0]) + componentToHex(randomColor[1]) + componentToHex(randomColor[2]);
+}
+
+
+function handleTilts(tiltNums, mode = TILTINIT) {
+
+    if (mode === TILTDESTROY || mode === TILTRESET) {
+
+        for (var i = 0; i < tiltNums.length; i++) {
+
+            tiltNums[i].vanillaTilt.destroy();
+        }
+    }
+
+    if (mode === TILTINIT || mode === TILTRESET) {
+
+        VanillaTilt.init(tiltNums, {
+
+            max: 35,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.6,
+
+        });
+    }
+
 }
 
 
