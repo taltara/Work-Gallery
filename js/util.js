@@ -131,7 +131,7 @@ function createParticles() {
                 "events": {
                     "onhover": {
                         "enable": true,
-                        "mode": "repulse"
+                        "mode": "grab"
                     },
                     "onclick": {
                         "enable": true,
@@ -141,7 +141,7 @@ function createParticles() {
                 },
                 "modes": {
                     "grab": {
-                        "distance": 400,
+                        "distance": 200,
                         "line_linked": {
                             "opacity": 1
                         }
